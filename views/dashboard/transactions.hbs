@@ -1,0 +1,75 @@
+<div class="content-header">
+	<div class="container-fluid">
+		<div class="row mb-2">
+			<div class="col-sm-6">
+				<h1 class="m-0 text-dark">Asaana</h1>
+			</div><!-- /.col -->
+			<div class="col-sm-6">
+				<ol class="breadcrumb float-sm-right">
+					<li class="breadcrumb-item"><a href="/">Home</a></li>
+					<li class="breadcrumb-item active"><a href="/app/transactions">Transactions</a></li>
+				</ol>
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container-fluid -->
+</div>
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="">
+							<form method="GET">
+								<table class="table">
+									<tr>
+										<td>
+											<select name="wallet" class="form-control">
+												<option value="">Select Wallet</option>
+												{{#each data.wallets}}
+													<option value="{{id}}" {{{select id ...wallet}}}>{{msisdn}} - {{operator}}</option>
+												{{/each}}
+											</select>
+										</td>
+										<td>From</td>
+										<td><input type="text" value="{{start}}" name="start" class="form-control from-date" placeholder="From"></td>
+										<td>To</td>
+										<td><input type="text" value="{{end}}" name="end" class="form-control to-date" placeholder="To"></td>
+										<td><button type="submit" class="btn btn-info">Filter</button></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+					<div class="card-body table-responsive p-0">
+						{{#if wallet}}
+						<table class="table transactions-table" 
+							data-toggle="table" 
+							data-url="/app/data/wallet/history?id={{wallet}}&start={{start}}&end={{end}}"
+							data-side-pagination="server" 
+							data-height="400" 
+							data-pagination="true" 
+							data-search="false"
+							data-mobile-responsive="true">
+							<thead>
+								<tr>
+									<th data-field="wallet">Wallet ID</th>
+									<th data-field="action">Action</th>
+									<th data-field="description">Description</th>
+									<th data-field="balance">Balance</th>
+									<th data-field="commission">Commission</th>
+									<th data-field="date">Transaction Date</th>
+								</tr>
+							</thead>
+						</table>
+						{{else}}
+							<div class="text-center">
+								<p>No wallet selected</p>
+							</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

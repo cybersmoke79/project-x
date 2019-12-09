@@ -1,0 +1,77 @@
+/*!
+ *   AdminLTE v3.0.0-beta.2
+ *   Author: Colorlib
+ *	 Website: AdminLTE.io <http://adminlte.io>
+ *   License: Open source - MIT <http://opensource.org/licenses/MIT>
+ */
+// Bootstrap
+// ---------------------------------------------------
+@import '../../node_modules/bootstrap/scss/functions';
+@import 'parts/bootstrap-variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Variables and Mixins
+// ---------------------------------------------------
+@import 'parts/variables';
+@import 'parts/mixins';
+
+// Core
+// ---------------------------------------------------
+@import 'parts/layout';
+
+// Components
+// ---------------------------------------------------
+@import 'parts/main-header';
+@import 'parts/brand';
+@import 'parts/main-sidebar';
+@import 'parts/sidebar-mini';
+@import 'parts/control-sidebar';
+@import 'parts/dropdown';
+@import 'parts/forms';
+@import 'parts/progress-bars';
+@import 'parts/small-box';
+@import 'parts/cards';
+@import 'parts/info-box';
+@import 'parts/timeline';
+@import 'parts/buttons';
+@import 'parts/callout';
+@import 'parts/alerts';
+@import 'parts/navs';
+@import 'parts/products';
+@import 'parts/table';
+@import 'parts/direct-chat';
+@import 'parts/users-list';
+@import 'parts/carousel';
+@import 'parts/social-widgets';
+@import 'parts/modals';
+
+// Pages
+// ---------------------------------------------------
+@import 'parts/pages/mailbox';
+@import 'parts/pages/lockscreen';
+@import 'parts/pages/login_and_register';
+@import 'parts/pages/404_500_errors';
+@import 'parts/pages/invoice';
+@import 'parts/pages/profile';
+@import 'parts/pages/e_commerce';
+@import 'parts/pages/projects';
+
+// Plugins
+// ---------------------------------------------------
+@import 'parts/plugins/fullcalendar';
+@import 'parts/plugins/select2';
+@import 'parts/plugins/bootstrap-slider';
+@import 'parts/plugins/icheck-bootstrap';
+@import 'parts/plugins/mapael';
+@import 'parts/plugins/jqvmap';
+@import 'parts/plugins/sweetalert2';
+@import 'parts/plugins/toastr';
+@import 'parts/plugins/miscellaneous';
+
+// Miscellaneous
+// ---------------------------------------------------
+@import 'parts/miscellaneous';
+@import 'parts/print';
+@import 'parts/text';
+@import 'parts/elevation';
+@import 'parts/colors';

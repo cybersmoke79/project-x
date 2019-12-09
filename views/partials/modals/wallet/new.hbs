@@ -1,0 +1,35 @@
+<div class="modal fade" id="new-wallet">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">New Wallet</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form role="form" action="/app/data/wallet/save" method="post" class="ajax-form">
+					<div class="card-body">
+						<div class="form-group">
+							<label for="phone">Phone Number</label>
+							<input type="text" class="form-control" name="phone" id="phone" placeholder="Enter phone number" required>
+						</div>
+						<div class="form-group">
+							<label>Mobile Operator</label>
+							<select name="operator" class="form-control" required>
+								<option value="">Select</option>
+								<option value="airteltigo">Airtel Tigo</option>
+								<option value="glo">Glo</option>
+								<option value="mtn">MTN</option>
+								<option value="busy">Busy</option>
+							</select>
+						</div>
+					</div>
+					<div class="card-footer">
+						<button type="submit" class="btn btn-primary">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,97 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+	<!-- Brand Logo -->
+	<a href="/" class="brand-link">
+		<img src="/img/logo.png" alt="Asaana Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+	</a>
+
+	<!-- Sidebar -->
+	<div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+
+		<!-- Sidebar Menu -->
+		<nav class="mt-2">
+			<ul class="asaana-nav nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+				<!-- Add icons to the links using the .nav-icon class
+			with font-awesome or any other icon font library -->
+				<li class="nav-item">
+					<a href="/" class="nav-link">
+						<i class="nav-icon fas fa-tachometer-alt"></i>
+						<p>
+							Dashboard
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/wallets" class="nav-link">
+						<i class="nav-icon fas fa-wallet"></i>
+						<p>
+							Wallets
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/transactions" class="nav-link">
+						<i class="nav-icon fas fa-money-bill-wave"></i>
+						<p>
+							Transactions
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/access" class="nav-link">
+						<i class="nav-icon fas fa-server"></i>
+						<p>
+							API Keys
+						</p>
+					</a>
+				</li>
+				{{#if user.access.admin }}
+				<li class="nav-header">Admin</li>
+				<li class="nav-item">
+					<a href="/app/admin/users" class="nav-link">
+						<i class="nav-icon fas fa-users"></i>
+						<p>
+							Users
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/admin/wallets" class="nav-link">
+						<i class="nav-icon fas fa-wallet"></i>
+						<p>
+							Wallets
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/admin/transactions" class="nav-link">
+						<i class="nav-icon fas fa-money-bill-wave"></i>
+						<p>
+							Transactions
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/admin/access" class="nav-link">
+						<i class="nav-icon fas fa-server"></i>
+						<p>
+							API Keys
+						</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="/app/admin/providers" class="nav-link">
+						<i class="nav-icon fas fa-tasks"></i>
+						<p>
+							Providers
+						</p>
+					</a>
+				</li>
+				{{/if}}
+				
+			</ul>
+		</nav>
+		<!-- /.sidebar-menu -->
+	</div>
+	<!-- /.sidebar -->
+</aside>
